@@ -20,7 +20,7 @@ import { useState } from "react";
                 </IconContext.Provider>
             </button>
             <div className=" ml-auto">
-                <ul  className={`${isNavbarExpaned ? "opacity-0 invisible cus-navbar-transition" : "opacity-1  visible cus-navbar-transition "} lg:visible  flex-wrap flex lg:flex-row lg:top-auto mx-0 lg:items-center lg:w-auto lg:static lg:bg-custom_brown  p-0 list-none my-0  absolute top-12 left-0 flex-col w-full bg-custom_cerem text-custom_blue border-2 lg:border-0`}>
+                <ul  className={`${isNavbarExpaned ? "opacity-0 invisible cus-navbar-transition" : "opacity-100  visible cus-navbar-transition "} lg:visible lg:opacity-100 flex-wrap flex lg:flex-row lg:top-auto mx-0 lg:items-center lg:w-auto lg:static lg:bg-custom_brown  p-0 list-none my-0  absolute top-12 left-0 flex-col w-full bg-custom_cerem text-custom_blue border-2 lg:border-0`}>
                 {[
                     ["Products" , "/products"],
                     ["lorem1" , "/lorem1"],
