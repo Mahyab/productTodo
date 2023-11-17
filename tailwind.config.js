@@ -11,6 +11,14 @@ export default {
       "custom_cerem":"#E6CC99",
       "custom_warning":"#FF6666",
     },
+    screens:{
+      "xm":"576px",
+      "sm":"640px",
+      "md":"768px",
+      "lg":"1024px",
+      "xl":"1280px",
+
+    },
     extend: {},
     borderRadius:{
       "custom_border_radius":"10px"
