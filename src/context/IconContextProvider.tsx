@@ -1,8 +1,13 @@
 //  import { IconContext } from "react-icons"
 
-// export default function IconContextProvider({children , styles}) {
+// interface IcontextProp {
+//     children:string,
+//     style?:string |,
+// }
+
+// export default function IconContextProvider({children , style}:IcontextProp) {
 //     return(
-//         <IconContext.Provider value={styles}>
+//         <IconContext.Provider value={style}>
 //             {children}
 //         </IconContext.Provider>
 //     )
