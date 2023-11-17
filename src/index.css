@@ -3,13 +3,17 @@ html {
 }
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .cus-conatiner {
     max-width:90%;
     margin:  0 auto;
     padding: 1rem
 }
-
+.cus-navbar-transition {
+    transition: all .3s ease-in-out
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
