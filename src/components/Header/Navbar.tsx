@@ -3,9 +3,13 @@
  import {FaAlignCenter} from  "react-icons/fa";
  import { FaTimes } from "react-icons/fa";
  import { IconContext } from "react-icons";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
  function Navbar() {
     const [isNavbarExpaned , setIsNavbarExpanded] = useState(false);
+    const menuRef = useRef();
+    useEffect(() => {
+        
+    })
     function handleNavbarOpened() {
         setIsNavbarExpanded(!isNavbarExpaned);
     }
@@ -16,11 +20,11 @@ import { useState } from "react";
             </a>
             <button onClick={handleNavbarOpened} className={`hamburget-icon lg:hidden md:block md:top-0 border-0 h-2/5  rounded-full cursor-pointer absolute top-1/2 right-4   hover:text-custom_cerem`}>
                 <IconContext.Provider value={{className:"hover:text-custom_blue text-2xl" }}>
-               {isNavbarExpaned ? <FaAlignCenter />: <FaTimes/>} 
+               {isNavbarExpaned ?  <FaTimes/>:<FaAlignCenter />} 
                 </IconContext.Provider>
             </button>
             <div className=" ml-auto">
-                <ul  className={`${isNavbarExpaned ? "opacity-0 invisible cus-navbar-transition" : "opacity-100  visible cus-navbar-transition "} lg:visible lg:opacity-100 flex-wrap flex lg:flex-row lg:top-auto mx-0 lg:items-center lg:w-auto lg:static lg:bg-custom_brown  p-0 list-none my-0  absolute top-12 left-0 flex-col w-full bg-custom_cerem text-custom_blue border-2 lg:border-0`}>
+                <ul ref={menuRef}  className={`${isNavbarExpaned ?  "opacity-100  visible cus-navbar-transition ":"opacity-0 invisible cus-navbar-transition" } lg:visible lg:opacity-100 flex-wrap flex lg:flex-row lg:top-auto mx-0 lg:items-center lg:w-auto lg:static lg:bg-custom_brown  p-0 list-none my-0  absolute top-12 left-0 flex-col w-full bg-custom_cerem text-custom_blue border-2 lg:border-0`}>
                 {[
                     ["Products" , "/products"],
                     ["lorem1" , "/lorem1"],
