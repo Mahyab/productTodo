@@ -17,6 +17,7 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@reduxjs/toolkit": "^1.9.7",
+    "@types/react-transition-group": "^4.4.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icon": "^1.0.0",
