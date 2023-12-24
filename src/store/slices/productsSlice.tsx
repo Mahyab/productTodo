@@ -41,11 +41,10 @@ const productsSlice  = createSlice({
                 return product.id !== action.payload;
             });
         },
-        completeProduct(state , action:PayloadAction<boolean>) {
+        completeProduct(state , action:PayloadAction<TproductData>) {
             // tick is the product is completed
-            state.data.map((product) => {
-                return product.isCompleted = action.payload
-            })
+            const selectedProduct = state.data.find((product) => product.id === action.payload.id)
+            selectedProduct.isCompleted = !selectedProduct?.isCompleted
         }
     }
 })
