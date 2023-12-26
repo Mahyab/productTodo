@@ -1,5 +1,5 @@
 import { useAppSelector  , useAppDispatch} from "../../hooks/reduxHook";
-import { completeProduct } from "../../store/slices/productsSlice";
+import { completeProduct ,removeProduct } from "../../store/slices/productsSlice";
 function ProductList() {
     const dispatch = useAppDispatch(); 
     const {data}=useAppSelector((state) => {
@@ -7,17 +7,23 @@ function ProductList() {
             data:state.products.data
         }
     })
-  
+
     const renderProduct = data.map((item) =>{
     return (
-        <li className="flex" key={item.id}>
-            <p>{item.product}</p>
-            <span>{item.count}</span>
-            <div className="flex items-center me-4">
-            <input checked={item.isCompleted} id="complete-product-checkbox" onChange={() => dispatch(completeProduct(item))} type="checkbox" value=""/>
-                <label htmlFor="complete-product-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">compelet</label>
+        <li className="flex justify-around align-baseline" key={item.id}>
+            <div>
+                <p>{item.product}</p>
             </div>
-            <button type="button">Delete X</button>
+            <div>
+            <span>{item.count}</span>
+            </div>
+            <div className="flex items-center me-4">
+                <label htmlFor={item.id} className={`${item.isCompleted &&  'line-through'}  text-orange-500 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600`}>
+                    Complete
+                    <input checked={item.isCompleted} className=" ms-2 text-sm font-medium  dark:text-gray-300" id={item.id} onChange={() => dispatch(completeProduct(item))} type="checkbox" value=""/>
+                </label>
+            </div>
+            <button type="button" onClick={() => dispatch(removeProduct(item.id))} className="text-custom_warning hover:text-custom_blue font-extrabold"> X</button>
             
         </li>
     )
