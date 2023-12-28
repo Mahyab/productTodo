@@ -8,10 +8,10 @@ function ProductList() {
             data:state.products.data
         }
     });
-
+    
     const renderProductListTitle = product[0].map((title) => {
         return(
-            <span className="font-bold text-custom_brown">{title.productTitle}</span>
+            <span className="font-bold text-custom_brown" key={title.productTitle}>{title.productTitle}</span>
         )
     })
 
