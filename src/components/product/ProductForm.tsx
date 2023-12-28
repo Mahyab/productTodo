@@ -15,8 +15,8 @@ function ProductForm() {
     function handleProductSubmit(event:FormEvent<HTMLFormElement>):void {
         event.preventDefault(); 
         dispatch(addProducts({product, count ,isCompleted}));
-        console.log(product , count , isCompleted );
-        console.log({product , count ,isCompleted })
+            // console.log(product , count , isCompleted );
+            // console.log({product , count ,isCompleted })
     }
     function handleProduct(event:ChangeEvent<HTMLFormElement>) {
         const Product = event.target.value;
