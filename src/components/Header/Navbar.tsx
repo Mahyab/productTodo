@@ -3,6 +3,7 @@
  import {FaAlignCenter} from  "react-icons/fa";
  import { FaTimes } from "react-icons/fa";
  import { IconContext } from "react-icons";
+ import LOGO from "../../assets/logo.png"
 import { useEffect, useRef, useState } from "react";
  function Navbar() {
     const [isNavbarExpaned , setIsNavbarExpanded] = useState(false);
@@ -15,8 +16,8 @@ import { useEffect, useRef, useState } from "react";
     }
     return(
         <nav className="navigation flex justify-start items-center relative bg-custom_brown text-black">
-            <a className="brand-name  text-black ml-2 no-underline">
-                Mahya
+            <a className="brand-name  text-black ml-2 no-underline" href="#">
+                <img src={LOGO} alt="the logo" width={100} />
             </a>
             <button onClick={handleNavbarOpened} className={`hamburget-icon lg:hidden md:block md:top-0 border-0 h-2/5  rounded-full cursor-pointer absolute top-1/2 right-4   hover:text-custom_cerem`}>
                 <IconContext.Provider value={{className:"hover:text-custom_blue text-2xl" }}>
