@@ -25,9 +25,9 @@ const ProductFormSlice = createSlice({
        
     },
     extraReducers(builder) {
-        builder.addCase(addProducts , (state , action:PayloadAction<TpriductFormInitalState>) => {
+        builder.addCase(addProducts , (state) => {
             state.count =  0;
-            state.product= ""
+            state.product= "";
         })
     }
 
@@ -35,5 +35,4 @@ const ProductFormSlice = createSlice({
 export const {changeProduct , changeCount} = ProductFormSlice.actions;
 export const selsetproductFormProduct = (state:RooteState) => state.productsFrom.product;
 export const selectProductFormCount = (state:RooteState) => state.productsFrom.count;
-export const selectProductFormComplete = (state:RooteState) => state.productsFrom.isCompleted;
 export const productFromReducer = ProductFormSlice.reducer;
