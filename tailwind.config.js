@@ -4,13 +4,17 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode:'class',
   theme: {
     colors:{
       "custom_brown":"#807366",
       "custom_blue":"#66B88F",
       "custom_cerem":"#E6CC99",
       "custom_warning":"#FF6666",
-      "white":"#fff"
+      "white":"#fff",
+      "custom_orange":"#FA7B1D",
+      "black":"#000",
+      "yellow": "#FFFF00"
     },
     screens:{
       "xm":"576px",
