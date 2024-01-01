@@ -1,16 +1,15 @@
 import { createSlice , PayloadAction } from "@reduxjs/toolkit";
 import { RooteState } from "..";
+import { addProducts } from "./productsSlice";
 
     
 type TpriductFormInitalState  = {
     product:string,
     count:number,
-    isCompleted:boolean
 }
 const initialState: TpriductFormInitalState = {
     product:"",
     count:0,
-    isCompleted:false
 }
 
 const ProductFormSlice = createSlice({
@@ -23,13 +22,17 @@ const ProductFormSlice = createSlice({
         changeCount(state, action:PayloadAction<number>) {
             state.count = action.payload;
         }, 
-        changeComplete(state , action:PayloadAction<boolean>) {
-            state.isCompleted = action.payload;
-        }
+       
+    },
+    extraReducers(builder) {
+        builder.addCase(addProducts , (state , action:PayloadAction<TpriductFormInitalState>) => {
+            state.count =  0;
+            state.product= ""
+        })
     }
 
 });
-export const {changeProduct , changeCount , changeComplete} = ProductFormSlice.actions;
+export const {changeProduct , changeCount} = ProductFormSlice.actions;
 export const selsetproductFormProduct = (state:RooteState) => state.productsFrom.product;
 export const selectProductFormCount = (state:RooteState) => state.productsFrom.count;
 export const selectProductFormComplete = (state:RooteState) => state.productsFrom.isCompleted;
