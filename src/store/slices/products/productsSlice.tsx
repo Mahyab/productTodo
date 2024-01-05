@@ -1,5 +1,5 @@
 import { createSlice  , nanoid, PayloadAction } from "@reduxjs/toolkit";
-import { RooteState } from "..";
+import { RooteState } from "../../..";
 
 type TproductData = {
     id?: string,
