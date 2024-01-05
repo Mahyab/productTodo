@@ -12,7 +12,9 @@ function ProductValue() {
         return count
     })
     return(
-      <>count {totalCount}</>
+      <div className="bg-custom_blue px-11 py-3 text-end ">
+        <div className="">count {totalCount} </div>
+      </div>
     )
 }
 export default ProductValue;
