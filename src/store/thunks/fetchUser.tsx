@@ -2,7 +2,9 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 interface IUser {
     id:number ,
-    name: string
+    name: string,
+    city:string,
+    age:number
 }
 const fetchUsers = createAsyncThunk("users/fetch", async () :Promise<IUser[]>=>{
     const {data} = await axios.get<IUser[]>("http://localhost:3000/users");
