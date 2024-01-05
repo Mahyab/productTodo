@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { useAppDispatch ,  useAppSelector} from "../../hooks/reduxHook";
-import { changeSearchTerm } from "../../store/slices/productsSlice";
+import { changeSearchTerm } from "../../store/slices/products/productsSlice";
 
 function ProductSearch() {
     const dispatch = useAppDispatch();

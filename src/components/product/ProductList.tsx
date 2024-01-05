@@ -1,5 +1,5 @@
 import { useAppSelector  , useAppDispatch} from "../../hooks/reduxHook";
-import { completeProduct ,removeProduct } from "../../store/slices/productsSlice";
+import { completeProduct ,removeProduct } from "../../store/slices/products/productsSlice";
 import {product} from "../../data/product"
 function ProductList() {
     const dispatch = useAppDispatch(); 

@@ -1,7 +1,7 @@
 import { FormEvent,ChangeEvent, Fragment, useState } from "react";
 import { useAppDispatch , useAppSelector } from "../../hooks/reduxHook";
-import { addProducts  } from "../../store/slices/productsSlice";
-import { changeProduct , changeCount } from "../../store/slices/productsFormSlice";
+import { addProducts  } from "../../store/slices/products/productsSlice";
+import { changeProduct , changeCount } from "../../store/slices/products/productsFormSlice";
 import ProductErrorMessage from "./ProductErrorMesage";
 function ProductForm() {
     const [errorMessage , setErrorMessage] = useState<string>("");
