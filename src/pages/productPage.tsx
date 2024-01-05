@@ -5,11 +5,11 @@ import ProductValue from "../components/product/ProductValue";
 
 function ProductPage() {
     return(
-        <React.Fragment>
+        <section>
             <Products/>
             <ProductList/>  
             <ProductValue/>
-        </React.Fragment>
+        </section>
         
     )
 }
